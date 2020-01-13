@@ -1,30 +1,23 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+interface Location {
+  latitude:String;
+  longitude:String;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
 
-  constructor() {
+  constructor(private httpClient : HttpClient) {
 
    }
 
-  getCurrentLocation(){
-    console.log("entered");
-    if(navigator.geolocation){
-      console.log("entered 2");
-      navigator.geolocation.getCurrentPosition(position =>{
-        console.log("entered 3");
-        const longitude = position.coords.longitude;
-        const latitude = position.coords.latitude;
-        console.log("majd");
-        console.log("lat" + latitude +" lon"+longitude);
-      })
-    }
-    else{
-      console.log("you cant");
-    }
-  }
+   getCurrentLocation(){
+     return this.httpClient.get<Location>('http://api.ipapi.com/188.215.120.175?access_key=8f949cf29a49f6326fdd51e77bc0316f');
+   }
 
 
 
