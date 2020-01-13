@@ -7,9 +7,18 @@ import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 
 
 @NgModule({
-  declarations: [CurrentdayweatherComponent, OtherdaysweatherComponent, WeatherlistComponent],
+  declarations: [
+    CurrentdayweatherComponent,
+    OtherdaysweatherComponent,
+    WeatherlistComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    CurrentdayweatherComponent,
+    OtherdaysweatherComponent,
+    WeatherlistComponent
   ]
 })
 export class WeatherModule { }
