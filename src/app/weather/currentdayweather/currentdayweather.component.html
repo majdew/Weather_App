@@ -1,8 +1,10 @@
 <div class="component-root">
-    <div class="details"><span>{{city}}</span> </div>
-    <div class="details" ><span>13/1/2020</span></div>
-    <div class="details" ><span>Rainy</span></div>
-    <div class="details tempreture"><span>{{tempreture +"°c"}}</span></div>
+    <div class="details"><span>{{location.city}}</span> </div>
+    <div class="details" ><span></span></div>
+    <div class="details" ><span></span></div>
+    <div class="details tempreture"><span>{{+"°c"}}</span></div>
+    <div class="details" ><img  src = "http://openweathermap.org/img/wn/{{weather.list[0].weather[0].icon}}@2x.png"/></div>
+    
     <div class="details">
         <div class="tempretures-div">
             <span>{{minTemp+"°c"}}</span>
