@@ -1,6 +1,6 @@
 <div class="component-root">
     <div class="details">
-        <span>{{date *1000 | date : 'dd/MM/yyyy'}}</span>
+        <span>{{date *1000 | date : 'EEEE'}}</span>
     </div>
     <div class="details ">
         <div class="flex-row-center">
@@ -11,7 +11,11 @@
     <div class="details ">
         <div class="flex-row-center">
             <span>{{minTemp -273|number:"1.0-0"}}/</span>
-            <span>{{maxTemp -273|number:"1.0-0"}} ° c</span>
+            <span>{{maxTemp -273|number:"1.0-0"}} °c</span>
+            
         </div>
+    </div>
+    <div class="details">
+        <span [routerLink]="['/weatherdetail' , index]">?</span> 
     </div>
 </div>

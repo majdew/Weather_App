@@ -11,6 +11,7 @@ export class OtherdaysweatherComponent implements OnInit {
   @Input() maxTemp;
   @Input() icon;
   @Input() description;
+  @Input() index;
    
 
 

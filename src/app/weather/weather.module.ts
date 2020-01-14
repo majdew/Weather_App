@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CurrentdayweatherComponent } from './currentdayweather/currentdayweather.component';
 import { OtherdaysweatherComponent } from './otherdaysweather/otherdaysweather.component';
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
+import { WeatherdatailComponent } from './weatherdatail/weatherdatail.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -10,15 +12,18 @@ import { WeatherlistComponent } from './weatherlist/weatherlist.component';
   declarations: [
     CurrentdayweatherComponent,
     OtherdaysweatherComponent,
-    WeatherlistComponent
+    WeatherlistComponent,
+    WeatherdatailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports:[
     CurrentdayweatherComponent,
     OtherdaysweatherComponent,
-    WeatherlistComponent
+    WeatherlistComponent,
+    WeatherdatailComponent
   ]
 })
 export class WeatherModule { }
