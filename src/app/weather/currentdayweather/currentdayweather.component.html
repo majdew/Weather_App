@@ -1,12 +1,12 @@
 <div class="component-root">
-    <div class="details"><span>Hebron</span> </div>
+    <div class="details"><span>{{city}}</span> </div>
     <div class="details" ><span>13/1/2020</span></div>
     <div class="details" ><span>Rainy</span></div>
-    <div class="details tempreture"><span>27°c</span></div>
+    <div class="details tempreture"><span>{{tempreture +"°c"}}</span></div>
     <div class="details">
         <div class="tempretures-div">
-            <span>high 23°c</span>
-            <span> low 27°c</span>
+            <span>{{minTemp+"°c"}}</span>
+            <span> {{maxTemp+"°c"}}</span>
         </div>
     </div>
 </div>

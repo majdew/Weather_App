@@ -16,7 +16,7 @@ export class LocationService {
    }
 
    getCurrentLocation(){
-     return this.httpClient.get<Location>('http://api.ipapi.com/188.215.120.175?access_key=8f949cf29a49f6326fdd51e77bc0316f');
+     return this.httpClient.get<Location>('http://api.ipapi.com/195.3.190.151?access_key=8f949cf29a49f6326fdd51e77bc0316f');
    }
 
 
