@@ -1,6 +1,11 @@
 <div class="component-root">
-    <app-otherdaysweather> </app-otherdaysweather>
-    <app-otherdaysweather> </app-otherdaysweather>
-    <app-otherdaysweather> </app-otherdaysweather>
-    <app-otherdaysweather> </app-otherdaysweather>
+    <div *ngFor="let weatherItem of weather.list ; let i =index">
+        <app-otherdaysweather *ngIf="i % 8 ==0 && i!=0" 
+            [date]= "weatherItem.dt" 
+            [minTemp] ="weatherItem.main.temp_min"
+            [maxTemp] ="weatherItem.main.temp_max"
+            [icon]="weatherItem.weather[0].icon"
+            [description]="weatherItem.weather[0].description"> 
+        </app-otherdaysweather>
+    </div>
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationService } from '../location.service';
 import { WeatherService } from '../weather.service';
-import { Weather } from '../weather';
+
 
 @Component({
   selector: 'app-currentdayweather',
@@ -9,32 +8,35 @@ import { Weather } from '../weather';
   styleUrls: ['./currentdayweather.component.scss']
 })
 export class CurrentdayweatherComponent implements OnInit {
-  latitude : String = ' ';
-  longitude :String = ' ';
+  latitude : number;
+  longitude :number;
   location : Object ;
-  weather : Weather;
-  weatherList : Object [];
+  weather :String;
 
-  constructor(private locationService : LocationService , private weatherService : WeatherService) {
+
+  constructor(private weatherService : WeatherService) {
    }
    
 
   ngOnInit() {
-    this.locationService.getCurrentLocation()
-    .subscribe(data =>{
-      console.log(data);
-      this.latitude = data.latitude;
-      this.longitude = data.longitude;
-      this.location =  data;
+
+
+    
+    if(navigator){
+    navigator.geolocation.getCurrentPosition(response =>{
+      console.log(response);
+      this.latitude = response.coords.latitude;
+      this.longitude = response.coords.longitude;
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
         console.log(data);
         this.weather = data;
 
-      }); 
+      });
     });
     console.log (this.weather);
   }
+  }
+
 
 }
-// 

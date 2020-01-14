@@ -1,11 +1,17 @@
 <div class="component-root">
     <div class="details">
-        <span>Tomorrow</span>
+        <span>{{date *1000 | date : 'dd/MM/yyyy'}}</span>
     </div>
-    <div class="details">
-        <span>Sunny</span>
+    <div class="details ">
+        <div class="flex-row-center">
+            <span>{{description}}</span>
+            <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png"/>
+        </div>
     </div>
-    <div class="details">
-        <span>27/23°C</span>
+    <div class="details ">
+        <div class="flex-row-center">
+            <span>{{minTemp -273|number:"1.0-0"}}/</span>
+            <span>{{maxTemp -273|number:"1.0-0"}} ° c</span>
+        </div>
     </div>
 </div>

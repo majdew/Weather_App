@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-otherdaysweather',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./otherdaysweather.component.scss']
 })
 export class OtherdaysweatherComponent implements OnInit {
+  @Input() date ;
+  @Input() minTemp;
+  @Input() maxTemp;
+  @Input() icon;
+  @Input() description;
+   
+
+
 
   constructor() { }
 
   ngOnInit() {
+ 
   }
 
 }
