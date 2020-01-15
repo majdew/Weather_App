@@ -1,5 +1,5 @@
-<router-outlet></router-outlet>
-<div class="app-root" *ngIf="!router.url.includes('weatherdetail')" >
+<router-outlet   ></router-outlet>
+<div class="app-root" *ngIf="!router.url.includes('weatherdetail')&& !router.url.includes('search')" >
   <app-weatherlist ></app-weatherlist>
   
 </div>

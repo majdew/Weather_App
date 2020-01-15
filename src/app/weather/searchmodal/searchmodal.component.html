@@ -1,0 +1,15 @@
+<div class ="search">
+    <div class="details">
+        <input [(ngModel)]="name"  placeholder="search for a city">
+    </div>
+    <div class="details">
+        <div class="city-area">
+            <div  *ngFor="let city of cities.list"  >
+                <div class="city-name" *ngIf=" city.name | filtercity : name" [routerLink]="['/homepage' , city.coord.lat , city.coord.lon]" >
+                    <span>{{city.name }}</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

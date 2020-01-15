@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -15,14 +15,25 @@ export class WeatherdatailComponent implements OnInit {
   weather :String;
   
 
-  constructor(private activeroute : ActivatedRoute , private weatherService : WeatherService) { 
-    this.i = this.activeroute.snapshot.params.index;
+  constructor(private actroute : ActivatedRoute , private weatherService : WeatherService,private router : Router) { 
+    this.i = this.actroute.snapshot.params.index;
   }
 
   ngOnInit() {
     console.log("iam in");
-    if(navigator){
-      navigator.geolocation.getCurrentPosition(response =>{
+    if(this.router.url.includes("homepage")){
+      this.latitude = this.actroute.snapshot.params.lat;
+      this.longitude = this.actroute.snapshot.params.lng;
+      this.weatherService.getWeatherForcast(this.latitude , this.longitude)
+      .subscribe(data =>{   
+        console.log(data);
+        this.weather = data;
+
+      });
+    }
+    else{
+        if(navigator){
+        navigator.geolocation.getCurrentPosition(response =>{
         console.log(response);
         this.latitude = response.coords.latitude;
         this.longitude = response.coords.longitude;
@@ -34,7 +45,9 @@ export class WeatherdatailComponent implements OnInit {
         });
       });
       console.log (this.weather);
+      }
     }
-    }
+  }
+
 
 }

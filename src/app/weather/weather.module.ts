@@ -5,6 +5,9 @@ import { OtherdaysweatherComponent } from './otherdaysweather/otherdaysweather.c
 import { WeatherlistComponent } from './weatherlist/weatherlist.component';
 import { WeatherdatailComponent } from './weatherdatail/weatherdatail.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { SearchmodalComponent } from './searchmodal/searchmodal.component';
+import { FiltercityPipe } from './filtercity.pipe';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -13,11 +16,14 @@ import { AppRoutingModule } from '../app-routing.module';
     CurrentdayweatherComponent,
     OtherdaysweatherComponent,
     WeatherlistComponent,
-    WeatherdatailComponent
+    WeatherdatailComponent,
+    SearchmodalComponent,
+    FiltercityPipe
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports:[
     CurrentdayweatherComponent,

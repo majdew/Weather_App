@@ -13,4 +13,7 @@ export class WeatherService {
   getWeatherForcast(lat:number , lon:number){
     return this.httpClient.get<String>(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=0ecd6422798842a8f738d79bbc76e9c8`);
   }
+  getCities(lat:number , lon:number){
+    return this.httpClient.get<String>(`http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lon}&cnt=50&APPID=0ecd6422798842a8f738d79bbc76e9c8`);
+  }
 }
