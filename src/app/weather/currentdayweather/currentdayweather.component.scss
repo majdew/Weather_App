@@ -16,19 +16,20 @@
     .tempreture{
         font-size: 100px;
     }
-    .route{
-        justify-content: flex-end;
-        padding: 5px;
-        cursor: pointer;
-    }
     .header{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width :100%
-    }
-    .search{
+        width :100%; 
+        .search{
         cursor: pointer;
+        padding: 5px;
+        } 
+        .route{
+            justify-content: flex-end;
+            padding: 5px;
+            cursor: pointer;
+        }
     }
 }
 
