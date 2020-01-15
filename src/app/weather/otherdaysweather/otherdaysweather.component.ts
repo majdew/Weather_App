@@ -12,10 +12,6 @@ export class OtherdaysweatherComponent implements OnInit {
   @Input() icon;
   @Input() description;
   @Input() index;
-   
-
-
-
   constructor() { }
 
   ngOnInit() {

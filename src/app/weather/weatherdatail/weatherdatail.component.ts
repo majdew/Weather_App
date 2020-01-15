@@ -13,6 +13,7 @@ export class WeatherdatailComponent implements OnInit {
   longitude :number;
   location : Object ;
   weather :String;
+  date = new Date();
   
 
   constructor(private actroute : ActivatedRoute , private weatherService : WeatherService,private router : Router) { 
@@ -20,13 +21,11 @@ export class WeatherdatailComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("iam in");
     if(this.router.url.includes("homepage")){
       this.latitude = this.actroute.snapshot.params.lat;
       this.longitude = this.actroute.snapshot.params.lng;
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
-        console.log(data);
         this.weather = data;
 
       });
@@ -34,17 +33,14 @@ export class WeatherdatailComponent implements OnInit {
     else{
         if(navigator){
         navigator.geolocation.getCurrentPosition(response =>{
-        console.log(response);
         this.latitude = response.coords.latitude;
         this.longitude = response.coords.longitude;
         this.weatherService.getWeatherForcast(this.latitude , this.longitude)
         .subscribe(data =>{   
-          console.log(data);
           this.weather = data;
   
         });
       });
-      console.log (this.weather);
       }
     }
   }

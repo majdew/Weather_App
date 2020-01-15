@@ -26,25 +26,19 @@ export class CurrentdayweatherComponent implements OnInit {
       this.longitude = this.actroute.snapshot.params.lng;
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
-        console.log(data);
         this.weather = data;
-
       });
     }
     else {
         if(navigator){
           navigator.geolocation.getCurrentPosition(response =>{
-          console.log(response);
           this.latitude = response.coords.latitude;
           this.longitude = response.coords.longitude;
           this.weatherService.getWeatherForcast(this.latitude , this.longitude)
           .subscribe(data =>{   
-          console.log(data);
           this.weather = data;
-
           });
         });
-        console.log (this.weather);
         }
     }
 
