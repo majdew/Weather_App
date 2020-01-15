@@ -18,7 +18,8 @@
     }
     .route{
         justify-content: flex-end;
-        margin-right: 5px;
+        padding: 5px;
+        cursor: pointer;
     }
     .header{
         display: flex;
@@ -26,9 +27,8 @@
         justify-content: space-around;
         width :100%
     }
-    .search-icon{
-        height:20px;
-        width:20px;
+    .search{
+        cursor: pointer;
     }
 }
 

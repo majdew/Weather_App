@@ -8,11 +8,11 @@ import { WeatherService } from '../weather.service';
   styleUrls: ['./weatherdatail.component.scss']
 })
 export class WeatherdatailComponent implements OnInit {
-  i: number;
-  latitude : number;
-  longitude :number;
-  weather :String;
-  date = new Date();
+  private i : number;
+  private latitude : number;
+  private longitude : number;
+  private weather : String;
+  private today = new Date();
   
 
   constructor(private actroute : ActivatedRoute , private weatherService : WeatherService,private router : Router) { 
@@ -29,6 +29,4 @@ export class WeatherdatailComponent implements OnInit {
       });
     }
   }
-
-
 }

@@ -1,21 +1,21 @@
 <div class="component-root">
     <div class="details ">
         <div class="header">
-            <span [routerLink]="['/search' ]">search</span>
+            <span class="search" [routerLink]="['/search' ]">search</span>
             <span class="route" [routerLink]="['/weatherdetail' , 0 , latitude , longitude]">?</span> 
         </div>
     </div>
-    <div class="details"><span>{{weather.city.name}}</span> </div>
+    <div class="details"><span>{{weather?.city.name}}</span> </div>
     <div class="details"><span>Today</span></div>
-    <div class="details" ><span>{{weather.list[0].dt *1000 | date : 'dd/MM/yyyy'}}</span></div>
-    <div class="details" ><span>{{date | date : 'hh.mm a'}}</span></div>
-    <div class="details tempreture"><span>{{weather.list[0].main.temp -273 | number:'1.0-0'}}° c</span></div>
-    <div class="details" ><img  src = "http://openweathermap.org/img/wn/{{weather.list[0].weather[0].icon}}@2x.png"/></div>
-        <div class="details" ><span>{{weather.list[0].weather[0].description}}</span></div>
+    <div class="details" ><span>{{weather?.list[0].dt *1000 | date : 'dd/MM/yyyy'}}</span></div>
+    <div class="details" ><span>{{today | date : 'hh.mm a'}}</span></div>
+    <div class="details tempreture"><span>{{weather?.list[0].main.temp -273 | number:'1.0-0'}}° c</span></div>
+    <div class="details" ><img  src = "http://openweathermap.org/img/wn/{{weather?.list[0].weather[0].icon}}@2x.png"/></div>
+        <div class="details" ><span>{{weather?.list[0].weather[0].description}}</span></div>
     <div class="details">
         <div class="tempretures-div">
-            <span>{{weather.list[0].main.temp_min -273 | number:'1.0-0' }}° c</span>
-            <span> {{weather.list[0].main.temp_max -273 | number:'1.0-0'}}° c</span>
+            <span>{{weather?.list[0].main.temp_min -273 | number:'1.0-0' }}° c</span>
+            <span> {{weather?.list[0].main.temp_max -273 | number:'1.0-0'}}° c</span>
         </div>
     </div>
 </div>

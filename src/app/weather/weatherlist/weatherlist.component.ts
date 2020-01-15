@@ -8,10 +8,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./weatherlist.component.scss']
 })
 export class WeatherlistComponent implements OnInit {
-  latitude : number;
-  longitude :number;
-  location : Object ;
-  weather : String;
+  private latitude : number;
+  private longitude : number;
+  private weather : String;
 
   constructor(private weatherService : WeatherService,private router : Router,private actroute : ActivatedRoute) { }
 
@@ -21,23 +20,20 @@ export class WeatherlistComponent implements OnInit {
       this.longitude = this.actroute.snapshot.params.lng;
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
-        console.log(data);
         this.weather = data;
-
       });
     }
     else{
-          if(navigator){
-            navigator.geolocation.getCurrentPosition(response =>{
-            this.latitude = response.coords.latitude;
-            this.longitude = response.coords.longitude;
-            this.weatherService.getWeatherForcast(this.latitude , this.longitude)
-            .subscribe(data =>{   
-              this.weather = data;
-  
-               });
-              });
-          }
+        if(navigator){
+          navigator.geolocation.getCurrentPosition(response =>{
+          this.latitude = response.coords.latitude;
+          this.longitude = response.coords.longitude;
+          this.weatherService.getWeatherForcast(this.latitude , this.longitude)
+          .subscribe(data =>{   
+            this.weather = data;
+          });
+        });
+      }
     }
   }
 }

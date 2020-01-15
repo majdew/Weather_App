@@ -10,11 +10,11 @@ import { FiltercityPipe} from './../filtercity.pipe';
   styleUrls: ['./searchmodal.component.scss']
 })
 export class SearchmodalComponent implements OnInit {
-  latitude : number;
-  longitude :number;
-  location : Object ;
-  cities : Object;
-  name : string =" ";
+  private latitude : number;
+  private longitude :number;
+  private location : Object ;
+  private cities : Object;
+  private name : string ="";
 
 
   constructor(private weatherService : WeatherService) { }
@@ -22,18 +22,13 @@ export class SearchmodalComponent implements OnInit {
   ngOnInit() {
     if(navigator){
       navigator.geolocation.getCurrentPosition(response =>{
-        console.log(response);
         this.latitude = response.coords.latitude;
         this.longitude = response.coords.longitude;
         this.weatherService.getCities(this.latitude , this.longitude)
         .subscribe(data =>{   
-          console.log(data);
           this.cities= data;
-  
         });
       }); 
-
+    }
   }
-}
-
 }
