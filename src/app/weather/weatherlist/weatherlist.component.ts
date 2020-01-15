@@ -11,7 +11,7 @@ export class WeatherlistComponent implements OnInit {
   latitude : number;
   longitude :number;
   location : Object ;
-  weather :String;
+  weather : String;
 
   constructor(private weatherService : WeatherService,private router : Router,private actroute : ActivatedRoute) { }
 

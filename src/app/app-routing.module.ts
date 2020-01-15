@@ -7,7 +7,6 @@ import { SearchmodalComponent } from './weather/searchmodal/searchmodal.componen
 
 const routes: Routes = [
   {path:"weatherdetail/:index/:lat/:lng" , component:WeatherdatailComponent},
-  {path:" " , component:WeatherlistComponent},
   {path:"search" , component:SearchmodalComponent},
   {path:"homepage/:lat/:lng" , component:WeatherlistComponent},
 

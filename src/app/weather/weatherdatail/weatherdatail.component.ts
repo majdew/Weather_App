@@ -11,16 +11,15 @@ export class WeatherdatailComponent implements OnInit {
   i: number;
   latitude : number;
   longitude :number;
-  location : Object ;
   weather :String;
   date = new Date();
   
 
   constructor(private actroute : ActivatedRoute , private weatherService : WeatherService,private router : Router) { 
-    this.i = this.actroute.snapshot.params.index;
   }
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.i = this.actroute.snapshot.params.index;
     if(this.router.url.includes("weatherdetail")){
       this.latitude = this.actroute.snapshot.params.lat;
       this.longitude = this.actroute.snapshot.params.lng;

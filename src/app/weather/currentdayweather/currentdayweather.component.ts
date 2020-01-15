@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import {WeatherInformation} from './../weatherinformation';
 
 
 @Component({
@@ -13,10 +14,12 @@ export class CurrentdayweatherComponent implements OnInit {
   longitude :number;
   location : Object ;
   weather :String;
+  weatherInformation : WeatherInformation;
   date =new Date();
 
 
-  constructor(private weatherService : WeatherService , private router : Router , private actroute : ActivatedRoute) {
+  constructor(private weatherService : WeatherService , private router : Router , private actroute : ActivatedRoute ) {
+
    }
    
 
@@ -27,6 +30,8 @@ export class CurrentdayweatherComponent implements OnInit {
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
         this.weather = data;
+        this.weatherInformation = new WeatherInformation(data , 0);
+        console.log(this.weatherInformation);
       });
     }
     else {

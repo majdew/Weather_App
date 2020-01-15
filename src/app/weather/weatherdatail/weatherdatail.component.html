@@ -1,6 +1,6 @@
 <div class="component-root">
     <div class="details back">
-        <span [routerLink]="['/' ]"><</span>
+        <span class="back-icon" [routerLink]="['/homepage', latitude ,longitude]"><</span>
     </div>
     <div class="details"><span>{{weather.city.name}}</span> </div>
     <div class="details" ><span>{{weather.list[i].dt *1000 | date : ' EEEE'}}</span></div>
