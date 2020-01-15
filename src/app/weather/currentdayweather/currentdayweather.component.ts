@@ -12,6 +12,7 @@ export class CurrentdayweatherComponent implements OnInit {
   longitude :number;
   location : Object ;
   weather :String;
+  date =new Date();
 
 
   constructor(private weatherService : WeatherService) {
