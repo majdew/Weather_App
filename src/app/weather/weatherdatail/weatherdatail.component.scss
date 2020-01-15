@@ -18,11 +18,12 @@
     }
     .back{
         justify-content: flex-start;
-        font-size: 15px;
-        padding: 2px;
+        font-size: 18px;
+        border-bottom: white 1px solid;
         span {
-            padding: 2px;
-            cursor: pointer;
+            padding: 10px;
+          cursor: pointer;
         }
+        margin-bottom: 10px;
     }
 }
