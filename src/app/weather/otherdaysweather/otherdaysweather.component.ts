@@ -7,11 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./otherdaysweather.component.scss']
 })
 export class OtherdaysweatherComponent implements OnInit {
-  @Input() private date ;
-  @Input() private minTemp;
-  @Input() private maxTemp;
-  @Input() private icon;
-  @Input() private description;
+  @Input() private weatherInformation;
   @Input() private index;
   private latitude : number;
   private longitude : number;

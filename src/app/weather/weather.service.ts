@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+import {environment} from './../../environments/environment'
 
 
 @Injectable({
@@ -8,12 +8,13 @@ import {HttpClient} from '@angular/common/http';
 })
 export class WeatherService {
 
+
   constructor(private httpClient : HttpClient) { }
 
   getWeatherForcast(lat:number , lon:number){
-    return this.httpClient.get<String>(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=0ecd6422798842a8f738d79bbc76e9c8`);
+    return this.httpClient.get<any>(`${environment.weatherApiUrl}/forecast?lat=${lat}&lon=${lon}&APPID=${environment.weatherApiKey}`);
   }
   getCities(lat:number , lon:number){
-    return this.httpClient.get<String>(`http://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lon}&cnt=50&APPID=0ecd6422798842a8f738d79bbc76e9c8`);
+    return this.httpClient.get<String>(`${environment.weatherApiUrl}/find?lat=${lat}&lon=${lon}&cnt=50&APPID=${environment.weatherApiKey}`);
   }
 }

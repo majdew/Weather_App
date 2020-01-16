@@ -1,13 +1,9 @@
 <app-currentdayweather></app-currentdayweather>
-<div class="component-root">
-    <div *ngFor="let weatherItem of weather?.list ; let i =index">
+<div class="component-root" *ngIf="loading">
+    <div *ngFor="let weatherInformation of weatherInformationList ; let i =index">
         <app-otherdaysweather *ngIf="i % 8 ==0 && i!=0" 
-            [date]= "weatherItem.dt" 
-            [minTemp] ="weatherItem.main.temp_min"
-            [maxTemp] ="weatherItem.main.temp_max"
-            [icon]="weatherItem.weather[0].icon"
-            [description]="weatherItem.weather[0].description"
-            [index] = "i">
+        [weatherInformation] = "weatherInformation"
+        [index] = "i">
         </app-otherdaysweather>
     </div>
 </div>

@@ -1,4 +1,5 @@
-<div class="component-root">
+<div *ngIf="!loading">The page is loading ....</div>
+<div class="component-root" *ngIf="loading">
     <div class="details back">
         <span class="back-icon" [routerLink]="['/homepage', latitude ,longitude]">Back To Home Page</span>
     </div>

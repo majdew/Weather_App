@@ -13,6 +13,7 @@ export class WeatherdatailComponent implements OnInit {
   private longitude : number;
   private weather : String;
   private today = new Date();
+  private loading : boolean;
   
 
   constructor(private actroute : ActivatedRoute , private weatherService : WeatherService,private router : Router) { 
@@ -26,6 +27,7 @@ export class WeatherdatailComponent implements OnInit {
       this.weatherService.getWeatherForcast(this.latitude , this.longitude)
       .subscribe(data =>{   
         this.weather = data;
+        this.loading = true;
       });
     }
   }
