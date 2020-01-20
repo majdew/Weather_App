@@ -1,5 +1,6 @@
 import './../../environments/environment';
 import { environment } from './../../environments/environment';
+import { getLocaleDayNames } from '@angular/common';
 export class WeatherInformation {
     cityName : String;
     tempreture : number;
@@ -20,7 +21,7 @@ export class WeatherInformation {
         this.humidity = response.list[i].main.humidity;
         this.windSpeed = response.list[i].wind.speed;
         this.pressure = response.list[i].main.pressure;
-        this.date = response.list[i].dt;
+        this.date = (response.list[i].dt);
         this.icon = this.getIconUrl(response.list[i].weather[0].icon);
         this.description = response.list[i].weather[0].description;
     }

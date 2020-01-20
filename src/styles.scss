@@ -2,9 +2,12 @@
 *{
     margin: unset;
     font-family:Tahoma, Geneva, sans-serif;
+    
 }
 .app-root{
     width: 360px;
     height: 640px;
-
+    background-image: url('./assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

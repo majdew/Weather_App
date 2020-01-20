@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../weather.service';
-import { FiltercityPipe} from './../filtercity.pipe';
+import { FiltercityPipe} from '../filtercity.pipe';
 
 
 

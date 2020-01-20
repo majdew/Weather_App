@@ -1,0 +1,12 @@
+<div class="component-root">
+    <form [formGroup]="profileForm"  (ngSubmit)="validate()">
+        <div class="flex-column">
+            <h1 class="flex-row">Login</h1>
+            <input formControlName="email" type="email" />
+            <input formControlName="password" type="password"/>
+            <div class="flex-row">
+                <button> login </button>
+            </div>
+        </div>
+    </form>
+</div>

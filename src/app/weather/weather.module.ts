@@ -7,7 +7,8 @@ import { WeatherdatailComponent } from './weatherdatail/weatherdatail.component'
 import { AppRoutingModule } from '../app-routing.module';
 import { SearchmodalComponent } from './searchmodal/searchmodal.component';
 import { FiltercityPipe } from './filtercity.pipe';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 
@@ -18,18 +19,21 @@ import {FormsModule} from '@angular/forms';
     WeatherlistComponent,
     WeatherdatailComponent,
     SearchmodalComponent,
-    FiltercityPipe
+    FiltercityPipe,
+    LoginpageComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   exports:[
     CurrentdayweatherComponent,
     OtherdaysweatherComponent,
     WeatherlistComponent,
-    WeatherdatailComponent
+    WeatherdatailComponent,
+    LoginpageComponent
   ]
 })
 export class WeatherModule { }

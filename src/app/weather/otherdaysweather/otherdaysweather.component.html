@@ -1,6 +1,6 @@
 <div class="component-root">
     <div class="details">
-        <span>{{weatherInformation.date | date : "EEEE"}}</span>
+        <span>{{weatherInformation.date *1000 | date : "EEEE"}}</span>
     </div>
     <div class="details ">
         <div class="flex-row-center">

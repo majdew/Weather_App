@@ -26,6 +26,7 @@ export class WeatherlistComponent implements OnInit {
         for(let i = 0 ; i<40 ; i++){
           this.weatherInformationList[i] =new WeatherInformation( data , i);    
           console.log("done");  
+          console.log(this.weatherInformationList[i]);
         }
         this.loading = true;
       });
