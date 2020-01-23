@@ -1,10 +1,10 @@
 <app-currentdayweather></app-currentdayweather>
 <div class="component-root" *ngIf="loading">
-    <div *ngFor="let weatherInformation of weatherInformationList ; let i =index">
-        <app-otherdaysweather *ngIf="i % 8 ==0 && i!=0" 
-        [weatherInformation] = "weatherInformation"
-        [index] = "i">
-        </app-otherdaysweather>
-    </div>
+	<div *ngFor="let weatherInformation of weatherInformationList ; let i =index">
+		<app-otherdaysweather *ngIf="i % 8 ==0 && i!=0" 
+		[weatherInformation] = "weatherInformation"
+		[index] = "i">
+		</app-otherdaysweather>
+	</div>
 </div>
 

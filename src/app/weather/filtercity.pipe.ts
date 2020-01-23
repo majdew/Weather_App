@@ -1,13 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filtercity'
+	name: 'filtercity'
 })
 export class FiltercityPipe implements PipeTransform {
 
-  transform(item: string, searchText: string) {
-    searchText = searchText.toLowerCase();
-    return item.toLowerCase().includes(searchText);
-  }
+	transform(item: string, searchText: string) {
+		searchText = searchText.toLowerCase();
+		return item.toLowerCase().includes(searchText);
+	}
 
 }

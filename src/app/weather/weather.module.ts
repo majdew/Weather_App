@@ -13,27 +13,27 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 @NgModule({
-  declarations: [
-    CurrentdayweatherComponent,
-    OtherdaysweatherComponent,
-    WeatherlistComponent,
-    WeatherdatailComponent,
-    SearchmodalComponent,
-    FiltercityPipe,
-    LoginpageComponent
-  ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  exports:[
-    CurrentdayweatherComponent,
-    OtherdaysweatherComponent,
-    WeatherlistComponent,
-    WeatherdatailComponent,
-    LoginpageComponent
-  ]
+	declarations: [
+		CurrentdayweatherComponent,
+		OtherdaysweatherComponent,
+		WeatherlistComponent,
+		WeatherdatailComponent,
+		SearchmodalComponent,
+		FiltercityPipe,
+		LoginpageComponent
+	],
+	imports: [
+		CommonModule,
+		AppRoutingModule,
+		ReactiveFormsModule,
+		FormsModule
+	],
+	exports:[
+		CurrentdayweatherComponent,
+		OtherdaysweatherComponent,
+		WeatherlistComponent,
+		WeatherdatailComponent,
+		LoginpageComponent
+	]
 })
 export class WeatherModule { }

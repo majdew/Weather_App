@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;CAclB;;AAlBD,AAKI,eALW,CAKX,QAAQ,CAAA;EACJ,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;CAO1B;;AAdL,AAQQ,eARO,CAKX,QAAQ,CAGJ,gBAAgB,CAAA;EACZ,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,YAAY;CAChC;;AAbT,AAeI,eAfW,CAeX,WAAW,CAAA;EACP,SAAS,EAAE,KAAK;CACnB",
-    "sources": [
-        "currentdayweather.component.scss"
-    ],
-    "names": [],
-    "file": "currentdayweather.component.css"
-}

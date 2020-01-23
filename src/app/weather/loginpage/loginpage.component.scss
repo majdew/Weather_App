@@ -1,29 +1,49 @@
-.component-root{
+@mixin flexBox($flexDirection , $justifyContent) {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h1{
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+}
+
+.component-root{
+    @include flexBox (column , center);
+    height:100%;
+    background-image: url(./../../../assets/images/loginbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    form {
+        border: 1px white solid;
+        margin: 10px;
+        padding: 20px;
+    }
+    .title-div {
+        color: white;
+        font-size: 50px;
+    }
+    label {
         color: white;
     }
-
-    .flex-column{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .error-class {
+        font-size: small;
+        color: white;
+    }
+    .flex-column {
+        @include flexBox (column , center);
         input {
             margin: 10px;
-            height : 20px
+            width: 195px;
+            height : 35px
         }
-        .flex-row{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+        .flex-row {
+            @include flexBox (row , space-around);
         }
         button {
-            width:100px;
-            height: 30px;
+            width:150px;
+            height: 40px;
+            font-size: 25px;
             background-color: white;
-            border: 1px solid orange;
+            color: green;
+            border: 1px solid yellowgreen;
+            cursor: pointer;
         }
     }
 }

@@ -4,16 +4,15 @@ import { WeatherdatailComponent } from './weather/weatherdatail/weatherdatail.co
 import { WeatherlistComponent } from './weather/weatherlist/weatherlist.component';
 import { SearchmodalComponent } from './weather/searchmodal/searchmodal.component';
 
-
 const routes: Routes = [
-  {path:"weatherdetail/:index/:lat/:lng" , component:WeatherdatailComponent},
-  {path:"search" , component:SearchmodalComponent},
-  {path:"homepage/:lat/:lng" , component:WeatherlistComponent},
+	{path:"weatherdetail/:index/:lat/:lng" , component:WeatherdatailComponent},
+	{path:"search" , component:SearchmodalComponent},
+	{path:"homepage/:lat/:lng" , component:WeatherlistComponent},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

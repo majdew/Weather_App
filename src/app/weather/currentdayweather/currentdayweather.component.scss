@@ -1,31 +1,31 @@
-.component-root{
+.component-root {
     display: flex;
     flex-direction: column;
     color: white;
     font-size: 18px;
-    .details{
+    .details {
         display:flex;
         justify-content: center;
-        .tempretures-div{
+        .tempretures-div {
             display: flex;
             width: 100%;
             flex-direction: row;
             justify-content: space-around;
         }
     }        
-    .tempreture{
+    .tempreture {
         font-size: 100px;
     }
-    .header{
+    .header {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width :100%; 
-        .search{
+        .search {
         cursor: pointer;
         padding: 5px;
         } 
-        .route{
+        .route {
             justify-content: flex-end;
             padding: 5px;
             cursor: pointer;

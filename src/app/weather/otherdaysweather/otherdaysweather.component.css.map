@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,MAAM,EAAE,IAAI;CAMf;;AAZD,AAOI,eAPW,CAOX,QAAQ,CAAA;EACJ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAC1B",
-    "sources": [
-        "otherdaysweather.component.scss"
-    ],
-    "names": [],
-    "file": "otherdaysweather.component.css"
-}
