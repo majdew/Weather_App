@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurrentdayweatherComponent } from './currentdayweather/currentdayweather.component';
-import { OtherdaysweatherComponent } from './otherdaysweather/otherdaysweather.component';
-import { WeatherlistComponent } from './weatherlist/weatherlist.component';
-import { WeatherdatailComponent } from './weatherdatail/weatherdatail.component';
+import { CurrentdayweatherComponent } from './components/currentdayweather/currentdayweather.component';
+import { OtherdaysweatherComponent } from './components/otherdaysweather/otherdaysweather.component';
+import { WeatherlistComponent } from './pages/weatherlist/weatherlist.component';
+import { WeatherdatailComponent } from './pages/weatherdatail/weatherdatail.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { SearchmodalComponent } from './searchmodal/searchmodal.component';
-import { FiltercityPipe } from './filtercity.pipe';
+import { SearchmodalComponent } from './pages/searchmodal/searchmodal.component';
+import { FiltercityPipe } from './pipes/filtercity/filtercity.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { LoginpageComponent } from './loginpage/loginpage.component';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Directive, Input ,ElementRef } from '@angular/core';
-import { WeatherService } from '../weather.service';
-import { FiltercityPipe } from '../filtercity.pipe';
+import { WeatherService } from '../../services/weatherservice/weather.service';
+import { FiltercityPipe } from '../../pipes/filtercity/filtercity.pipe';
 
 @Component({
 	selector: 'app-searchmodal',

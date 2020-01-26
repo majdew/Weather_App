@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WeatherdatailComponent } from './weather/weatherdatail/weatherdatail.component';
-import { WeatherlistComponent } from './weather/weatherlist/weatherlist.component';
-import { SearchmodalComponent } from './weather/searchmodal/searchmodal.component';
+import { WeatherdatailComponent } from './weather/pages/weatherdatail/weatherdatail.component';
+import { WeatherlistComponent } from './weather/pages/weatherlist/weatherlist.component';
+import { SearchmodalComponent } from './weather/pages/searchmodal/searchmodal.component';
 
 const routes: Routes = [
 	{path:"weatherdetail/:index/:lat/:lng" , component:WeatherdatailComponent},
