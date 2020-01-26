@@ -2,16 +2,16 @@
 	<div class="details ">
 		<div class="header">
 			<span class="search" [routerLink]="['/search' ]">search</span>
-			<span class="route" [routerLink]="['/weatherdetail' , 0 , latitude , longitude]">?</span> 
+			<span class="route" [routerLink]="['/weatherdetail' , 0 , latitude , longitude]">?</span>
 		</div>
 	</div>
 	<div class="details"><span>{{weatherInformation.cityName}}</span> </div>
 	<div class="details"><span>Today</span></div>
-	<div class="details" ><span>{{weatherInformation.date | date : 'dd/MM/yyyy'}}</span></div>
-	<div class="details" ><span>{{today | date : 'hh.mm a'}}</span></div>
+	<div class="details"><span>{{weatherInformation.date * 1000 | date : 'dd/MM/yyyy'}}</span></div>
+	<div class="details"><span>{{today | date : 'hh.mm a'}}</span></div>
 	<div class="details tempreture"><span>{{weatherInformation?.tempreture}}° c</span></div>
-	<div class="details" ><img  src = "{{weatherInformation.icon}}"/></div>
-		<div class="details" ><span>{{weatherInformation.description}}</span></div>
+	<div class="details"><img src="{{weatherInformation.icon}}" /></div>
+	<div class="details"><span>{{weatherInformation.description}}</span></div>
 	<div class="details">
 		<div class="tempretures-div">
 			<span>{{weatherInformation.lowTempreture}}° c</span>

@@ -9,5 +9,4 @@ export class FiltercityPipe implements PipeTransform {
 		searchText = searchText.toLowerCase();
 		return item.toLowerCase().includes(searchText);
 	}
-
 }

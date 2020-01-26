@@ -7,7 +7,7 @@ import { WeatherdatailComponent } from './pages/weatherdatail/weatherdatail.comp
 import { AppRoutingModule } from '../app-routing.module';
 import { SearchmodalComponent } from './pages/searchmodal/searchmodal.component';
 import { FiltercityPipe } from './pipes/filtercity/filtercity.pipe';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 
 
@@ -28,7 +28,7 @@ import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 		ReactiveFormsModule,
 		FormsModule
 	],
-	exports:[
+	exports: [
 		CurrentdayweatherComponent,
 		OtherdaysweatherComponent,
 		WeatherlistComponent,

@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 	styleUrls: ['./loginpage.component.scss']
 })
 export class LoginpageComponent implements OnInit {
-	private currentLatitude: number;
-	private currentLongitude: number;
+
 	private submitted: boolean = false;
 	private profileForm = new FormGroup({
 		email: new FormControl(null, [
@@ -28,14 +27,7 @@ export class LoginpageComponent implements OnInit {
 
 	constructor(private router: Router) { }
 
-	ngOnInit() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(data => {
-				this.currentLatitude = data.coords.latitude;
-				this.currentLongitude = data.coords.longitude;
-			});
-		}
-	}
+	ngOnInit() { }
 
 	get control() {
 		return this.profileForm.controls;
@@ -51,7 +43,7 @@ export class LoginpageComponent implements OnInit {
 		}
 		else {
 			console.log("no errors");
-			this.router.navigate(['homepage', this.currentLatitude, this.currentLongitude]);
+			this.router.navigate(['homepage']);
 		}
 
 	}

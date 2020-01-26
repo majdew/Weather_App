@@ -1,5 +1,4 @@
 <router-outlet> </router-outlet>
-<app-loginpage *ngIf = "!router.url.includes('search')"> </app-loginpage>
-
-
-
+<app-loginpage
+    *ngIf="!router.url.includes('search') && !router.url.includes('weatherdetails') && !router.url.includes('homepage') ">
+</app-loginpage>

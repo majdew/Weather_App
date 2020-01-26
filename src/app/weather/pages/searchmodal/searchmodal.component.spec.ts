@@ -8,9 +8,9 @@ describe('SearchmodalComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ SearchmodalComponent ]
+			declarations: [SearchmodalComponent]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

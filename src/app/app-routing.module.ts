@@ -5,9 +5,10 @@ import { WeatherlistComponent } from './weather/pages/weatherlist/weatherlist.co
 import { SearchmodalComponent } from './weather/pages/searchmodal/searchmodal.component';
 
 const routes: Routes = [
-	{path:"weatherdetail/:index/:lat/:lng" , component:WeatherdatailComponent},
-	{path:"search" , component:SearchmodalComponent},
-	{path:"homepage/:lat/:lng" , component:WeatherlistComponent},
+	{ path: "weatherdetail/:index/:lat/:lng", component: WeatherdatailComponent },
+	{ path: "search", component: SearchmodalComponent },
+	{ path: "homepageback/:lat/:lng", component: WeatherlistComponent },
+	{ path: "homepage", component: WeatherlistComponent },
 
 ];
 

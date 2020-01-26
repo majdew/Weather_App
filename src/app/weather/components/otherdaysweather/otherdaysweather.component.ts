@@ -9,9 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class OtherdaysweatherComponent implements OnInit {
 	@Input() private weatherInformation;
 	@Input() private index;
-	private latitude : number;
-	private longitude : number;
-	constructor(private actroute : ActivatedRoute) { }
+	private latitude: number;
+	private longitude: number;
+	constructor(private actroute: ActivatedRoute) { }
 
 	ngOnInit() {
 		this.latitude = this.actroute.snapshot.params.lat;

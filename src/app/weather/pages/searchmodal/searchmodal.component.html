@@ -1,11 +1,12 @@
-<div class ="search">
-    <div class="details" >
-        <input [(ngModel)]="name"  placeholder="Search for a city :" #searchInput >
+<div class="search">
+    <div class="details">
+        <input [(ngModel)]="name" placeholder="Search for a city :" #searchInput>
     </div>
     <div class="details scroll" (scroll)="onScroll()">
         <div class="city-area">
-            <div  *ngFor="let city of cities ?.list"  >
-                <div class="city-name" *ngIf=" city?.name | filtercity : name" [routerLink]="['/homepage' , city.coord.lat , city.coord.lon]"  >
+            <div *ngFor="let city of cities ?.list">
+                <div class="city-name" *ngIf=" city?.name | filtercity : name"
+                    [routerLink]="['/homepageback' , city.coord.lat , city.coord.lon]">
                     <span>{{city.name }}</span>
                 </div>
             </div>

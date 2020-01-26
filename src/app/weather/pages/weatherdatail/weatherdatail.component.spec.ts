@@ -8,9 +8,9 @@ describe('WeatherdatailComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ WeatherdatailComponent ]
+			declarations: [WeatherdatailComponent]
 		})
-		.compileComponents();
+			.compileComponents();
 	}));
 
 	beforeEach(() => {

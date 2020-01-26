@@ -6,19 +6,19 @@ describe('OtherdaysweatherComponent', () => {
 	let fixture: ComponentFixture<OtherdaysweatherComponent>;
 
 	beforeEach(async(() => {
-	TestBed.configureTestingModule({
-		declarations: [ OtherdaysweatherComponent ]
-	})
-	.compileComponents();
+		TestBed.configureTestingModule({
+			declarations: [OtherdaysweatherComponent]
+		})
+			.compileComponents();
 	}));
 
 	beforeEach(() => {
-	fixture = TestBed.createComponent(OtherdaysweatherComponent);
-	component = fixture.componentInstance;
-	fixture.detectChanges();
+		fixture = TestBed.createComponent(OtherdaysweatherComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
 	});
 
 	it('should create', () => {
-	expect(component).toBeTruthy();
+		expect(component).toBeTruthy();
 	});
 });

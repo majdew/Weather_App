@@ -1,5 +1,5 @@
 <div class="component-root flex-column">
-    <form [formGroup]="profileForm"  (ngSubmit)="validate()">
+    <form [formGroup]="profileForm" (ngSubmit)="validate()">
         <div class="flex-column">
             <div class="flex-row title-div"> Weather App</div>
             <div class="flex-row">
@@ -8,17 +8,22 @@
             </div>
             <div *ngIf="submitted && control.email.errors" class="flex-row">
                 <div class="error-class" *ngIf="submitted && control.email.errors.required">Email is required !</div>
-                <div class="error-class" *ngIf="submitted && control.email.errors.pattern"> Email must be from "@pseu.edu" domain !</div>
+                <div class="error-class" *ngIf="submitted && control.email.errors.pattern"> Email must be from
+                    "@pseu.edu" domain !</div>
             </div>
             <div class="flex-row">
                 <label for="password" class="flex-column">Password :</label>
-                <input name="password" formControlName="password" type="password"/>    
+                <input name="password" formControlName="password" type="password" />
             </div>
             <div *ngIf="submitted && control.password.errors" class="flex-row">
-                <div class="error-class" *ngIf="submitted && control.password.errors.required">Password is required !</div>
-                <div class="error-class" *ngIf="submitted && control.password.errors.minlength"> Password must be at least 6 charcters!</div>
-                <div class="error-class" *ngIf="submitted && control.password.errors.maxlength"> Password must be at most 12  charcters!</div>
-                <div class="error-class" *ngIf="submitted && control.password.errors.pattern"> Password must contains uppercase , lowercase , special characters!</div>
+                <div class="error-class" *ngIf="submitted && control.password.errors.required">Password is required !
+                </div>
+                <div class="error-class" *ngIf="submitted && control.password.errors.minlength"> Password must be at
+                    least 6 charcters!</div>
+                <div class="error-class" *ngIf="submitted && control.password.errors.maxlength"> Password must be at
+                    most 12 charcters!</div>
+                <div class="error-class" *ngIf="submitted && control.password.errors.pattern"> Password must contains
+                    uppercase , lowercase , special characters!</div>
             </div>
             <div class="flex-row">
                 <button> Login </button>

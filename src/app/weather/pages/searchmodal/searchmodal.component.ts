@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Directive, Input ,ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, Directive, Input, ElementRef } from '@angular/core';
 import { WeatherService } from '../../services/weatherservice/weather.service';
 import { FiltercityPipe } from '../../pipes/filtercity/filtercity.pipe';
 
@@ -14,14 +14,14 @@ export class SearchmodalComponent implements OnInit {
 	private location: Object;
 	private cities: Object;
 	private name: string = "";
-	private scroll: boolean ;
-	@ViewChild('searchInput' , {static : false})
+	private scroll: boolean;
+	@ViewChild('searchInput', { static: false })
 	searchInput: ElementRef;
 
-	constructor(private weatherService: WeatherService ) { }
+	constructor(private weatherService: WeatherService) { }
 
 	ngOnInit() {
-		
+
 		if (navigator) {
 			navigator.geolocation.getCurrentPosition(response => {
 				this.latitude = response.coords.latitude;
