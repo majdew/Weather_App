@@ -8,17 +8,17 @@ import { Router } from '@angular/router';
 	styleUrls: ['./loginpage.component.scss']
 })
 export class LoginpageComponent implements OnInit {
-	private currentLatitude : number;
-	private currentLongitude : number;
-	private submitted : boolean = false ;
+	private currentLatitude: number;
+	private currentLongitude: number;
+	private submitted: boolean = false;
 	private profileForm = new FormGroup({
-		email : new FormControl(null, [
-			Validators.required ,
+		email: new FormControl(null, [
+			Validators.required,
 			Validators.maxLength(180),
 			Validators.email,
 			Validators.pattern(new RegExp('@pseu.edu$'))
 		]),
-		password : new FormControl(null , [
+		password: new FormControl(null, [
 			Validators.required,
 			Validators.minLength(6),
 			Validators.maxLength(12),
@@ -26,11 +26,11 @@ export class LoginpageComponent implements OnInit {
 		])
 	});
 
-	constructor(private router : Router) { }
+	constructor(private router: Router) { }
 
 	ngOnInit() {
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition(data =>{
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(data => {
 				this.currentLatitude = data.coords.latitude;
 				this.currentLongitude = data.coords.longitude;
 			});
@@ -41,18 +41,18 @@ export class LoginpageComponent implements OnInit {
 		return this.profileForm.controls;
 	}
 
-	validate(){
+	validate() {
 		this.submitted = true;
-		if (this.profileForm.invalid){
+		if (this.profileForm.invalid) {
 			console.log("email errors: ");
-			console.log(this.profileForm.get("email").errors); 
+			console.log(this.profileForm.get("email").errors);
 			console.log("password errors: ");
-			console.log(this.profileForm.get("password").errors);   
+			console.log(this.profileForm.get("password").errors);
 		}
 		else {
 			console.log("no errors");
-			this.router.navigate(['homepage' , this.currentLatitude , this.currentLongitude]);
+			this.router.navigate(['homepage', this.currentLatitude, this.currentLongitude]);
 		}
-			
+
 	}
 }
