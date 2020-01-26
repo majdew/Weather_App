@@ -34,14 +34,8 @@ export class SearchmodalComponent implements OnInit {
 		}
 	}
 
-	ngAfterViewInit() {
-		console.log('Values on ngAfterViewInit():');
-		console.log("searchInput:", this.searchInput.nativeElement);
-	}
-
 	onScroll() {
 		this.searchInput.nativeElement.style.height = '10px';
-
 	}
 }
 

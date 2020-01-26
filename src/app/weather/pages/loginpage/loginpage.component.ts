@@ -35,16 +35,8 @@ export class LoginpageComponent implements OnInit {
 
 	validate() {
 		this.submitted = true;
-		if (this.profileForm.invalid) {
-			console.log("email errors: ");
-			console.log(this.profileForm.get("email").errors);
-			console.log("password errors: ");
-			console.log(this.profileForm.get("password").errors);
-		}
-		else {
-			console.log("no errors");
+		if (!this.profileForm.invalid) {
 			this.router.navigate(['homepage']);
 		}
-
 	}
 }

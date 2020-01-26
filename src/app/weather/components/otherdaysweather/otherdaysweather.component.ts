@@ -16,7 +16,5 @@ export class OtherdaysweatherComponent implements OnInit {
 	ngOnInit() {
 		this.latitude = this.actroute.snapshot.params.lat;
 		this.longitude = this.actroute.snapshot.params.lng;
-		console.log("majd");
-		console.log(this.weatherInformation);
 	}
 }

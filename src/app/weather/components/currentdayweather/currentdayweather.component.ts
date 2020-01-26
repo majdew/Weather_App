@@ -26,11 +26,8 @@ export class CurrentdayweatherComponent implements OnInit {
 			this.weatherService.getWeatherForcast(this.latitude, this.longitude)
 				.subscribe(data => {
 					this.weather = data;
-					console.log(this.loading);
 					this.weatherInformation = new WeatherInformation(data, 0);
-
 					this.loading = true;
-					console.log(this.loading);
 				});
 		}
 		else {
@@ -42,7 +39,6 @@ export class CurrentdayweatherComponent implements OnInit {
 						.subscribe(data => {
 							this.weather = data;
 							this.weatherInformation = new WeatherInformation(data, 0);
-							console.log(this.weatherInformation);
 							this.loading = true;
 						});
 				});
